@@ -1,0 +1,18 @@
+# site-clearing-simulation
+
+1. My idea is to have a class called "Block" which will have position (of the site), clearedBefore(indicate if this area is
+cleared before), landType (include tree, plain, rocky or reserved tree).
+
+2. Scan the map to get "Block" detail information and record total quantity of squares because we need to print them.
+
+3. Receive valid steps from command line and save as a list of class "Step"
+
+4. Loop all the steps based on the command. If command is changing direction, then figure out where bulldozer will move.
+After that, increase or decrease row index or column index. Also, make sure they are not out of boundary which will terminate
+the program.
+
+4. Since bulldozer is facing east and outside of site, move one step to put bulldozer into position (0,0) first. Then check
+information of that block, if it is not reserved, record fuel usage, mark that block is visited, clear square minus one,
+as well as possible damage to bulldozer.
+
+5. Loop all the steps and update information inside class "ClearingCost" and print the result.
